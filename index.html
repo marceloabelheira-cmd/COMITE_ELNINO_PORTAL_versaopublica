@@ -376,6 +376,11 @@ footer.foot strong{color:#fff}
 .collapse-box .chev{margin-left:auto;font-size:11px;color:var(--muted);font-weight:400}
 .collapse-box + .grid, .collapse-box + .alertas-table-wrap{margin-top:14px}
 
+/* ---------- CTA Produtos SEDEC-RJ ---------- */
+.produtos-cta-wrap{text-align:center;margin-top:16px}
+.produtos-cta-btn{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;font-weight:700;font-size:13px;padding:10px 22px;border-radius:20px;border:0;cursor:pointer;transition:background .15s;font-family:inherit}
+.produtos-cta-btn:hover{background:#E85F13}
+
 /* ---------- destaque de acesso a dashboard ---------- */
 .dash-highlight{text-align:center;font-weight:700;background:#EAF1FB;border:1px solid var(--navy-2);border-radius:var(--radius);padding:14px 18px;margin-top:14px;color:var(--navy);font-size:14px}
 .sigacenf-frame{width:100%;height:calc(100vh - 210px);min-height:640px;border:0;display:block;background:#fff}
@@ -483,7 +488,7 @@ footer.foot strong{color:#fff}
       <div><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><h3>Alertas e Alarmes enviados à população</h3><span class="real-flag">Alguns exemplos reais de agosto e setembro</span></div><p>Mensagens por SMS, Cell Broadcast e sirenes, emitidas diretamente aos celulares e dispositivos na área de risco — canal distinto dos alertas operacionais acima.</p></div>
     </div>
     <div class="mod-body">
-      <button type="button" class="collapse-box" data-target="alertasTableWrap" data-open="Veja a relação desde o início de agosto ▾" data-close="Ocultar relação de alertas ▴">Veja a relação desde o início de agosto ▾</button>
+      <button type="button" class="collapse-box" data-target="alertasTableWrap" data-open="Veja a relação em agosto e setembro ▾" data-close="Ocultar relação de alertas ▴">Veja a relação em agosto e setembro ▾</button>
       <div class="alertas-table-wrap" id="alertasTableWrap" style="display:none">
         <div class="alertas-filter-bar">
           <div class="alertas-filter-field">
@@ -513,7 +518,6 @@ footer.foot strong{color:#fff}
         </table>
         <div class="alertas-filter-empty" id="alertasPublicoEmpty" style="display:none">Nenhum alerta encontrado para este filtro.</div>
       </div>
-      <div class="note">Envio via IDAP (Individual Direct Alerting Protocol) para celulares na área de risco e via Cell Broadcast pelo sistema Defesa Civil Alerta. Histórico completo no módulo de Alertas e Alarmes.</div>
     </div>
   </div>
 
@@ -563,6 +567,12 @@ footer.foot strong{color:#fff}
           </tbody>
         </table>
         <div class="note">Produtos desenvolvidos pelo NI²AD (Núcleo Integrado de Inteligência para Apoio à Decisão) da Força Especializada em Proteção e Defesa Civil — FE-SEDEC, vinculada à Secretaria de Estado de Defesa Civil do Rio de Janeiro — SEDEC-RJ.</div>
+        <div class="produtos-cta-wrap">
+          <button type="button" class="produtos-cta-btn" id="goProdutosSedecBtn">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="1.8" width="5.2" height="5.2" rx="1.2"/><rect x="9" y="1.8" width="5.2" height="5.2" rx="1.2"/><rect x="1.8" y="9" width="5.2" height="5.2" rx="1.2"/><path d="M11.6 9v5.2M9 11.6h5.2"/></svg>
+            Produtos SEDEC-RJ
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -1232,6 +1242,7 @@ footer.foot strong{color:#fff}
   .prod-divider::before,.prod-divider::after{content:''; flex:1; border-bottom:1px solid var(--border);}
   .prod-divider span{padding:0 14px; white-space:nowrap;}
   .prod-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px;}
+  .prod-grid .prod-card.prod-wide{grid-column:1 / -1;}
   @media (max-width:640px){.prod-grid{grid-template-columns:1fr;}}
   .prod-card{display:flex; align-items:flex-start; gap:12px; border:1px solid var(--border); border-radius:12px; padding:14px 16px; background:var(--surface-1); box-shadow:var(--shadow-1); text-decoration:none; color:inherit; transition:box-shadow .15s, transform .15s;}
   .prod-card:hover{box-shadow:var(--shadow-2); transform:translateY(-1px);}
@@ -1431,7 +1442,7 @@ footer.foot strong{color:#fff}
       </button>
       <button data-view=&quot;orgaos&quot;>
         <svg class=&quot;nav-icon&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;><path d=&quot;M2 14.6h12&quot;/><path d=&quot;M3.4 14.6V6.2L8 2.6l4.6 3.6v8.4&quot;/><line x1=&quot;6&quot; y1=&quot;9.4&quot; x2=&quot;6&quot; y2=&quot;14.6&quot;/><line x1=&quot;10&quot; y1=&quot;9.4&quot; x2=&quot;10&quot; y2=&quot;14.6&quot;/></svg>
-        <span>Órgãos &amp; Participação</span>
+        <span>Órgãos & Participação</span>
       </button>
       <button data-view=&quot;produtos&quot; id=&quot;navProdutosBtn&quot;>
         <svg class=&quot;nav-icon&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;><rect x=&quot;1.8&quot; y=&quot;1.8&quot; width=&quot;5.2&quot; height=&quot;5.2&quot; rx=&quot;1.2&quot;/><rect x=&quot;9&quot; y=&quot;1.8&quot; width=&quot;5.2&quot; height=&quot;5.2&quot; rx=&quot;1.2&quot;/><rect x=&quot;1.8&quot; y=&quot;9&quot; width=&quot;5.2&quot; height=&quot;5.2&quot; rx=&quot;1.2&quot;/><path d=&quot;M11.6 9v5.2M9 11.6h5.2&quot;/></svg>
@@ -1596,7 +1607,7 @@ footer.foot strong{color:#fff}
     <section class=&quot;view&quot; id=&quot;view-orgaos&quot;>
       <div class=&quot;view-header&quot;>
         <div class=&quot;eyebrow&quot;>Mapeamento de órgãos</div>
-        <h1>Órgãos &amp; Participação</h1>
+        <h1>Órgãos & Participação</h1>
         <p class=&quot;view-intro&quot;>Os 18 órgãos e entidades formalmente designados pelo art. 5º, com a matriz de em quais Câmaras Técnicas cada um já foi mapeado como participante.</p>
         <button type=&quot;button&quot; class=&quot;matrix-link-btn&quot; onclick=&quot;showView('matrizaxr')&quot;>▦ Ver em formato de Matriz AxR</button>
       </div>
@@ -1617,7 +1628,7 @@ footer.foot strong{color:#fff}
         <button class=&quot;back-link&quot; type=&quot;button&quot; onclick=&quot;showView(previousView)&quot;>← Voltar</button>
         <div class=&quot;eyebrow&quot;>Visualização ilustrativa</div>
         <h1>Matriz AxR — Atividades x Responsabilidades</h1>
-        <p class=&quot;view-intro&quot;>Mesma relação entre Câmaras Técnicas/Eixos e órgãos envolvidos já apresentada nas telas de Câmaras Técnicas e Órgãos &amp; Participação, só que num formato de matriz — mais visual para enxergar de uma vez quem coordena e quem participa de cada frente.</p>
+        <p class=&quot;view-intro&quot;>Mesma relação entre Câmaras Técnicas/Eixos e órgãos envolvidos já apresentada nas telas de Câmaras Técnicas e Órgãos & Participação, só que num formato de matriz — mais visual para enxergar de uma vez quem coordena e quem participa de cada frente.</p>
       </div>
       <div class=&quot;axr-legend&quot;>
         <div class=&quot;axr-legend-item&quot;><span class=&quot;axr-badge rp&quot;>RP</span> Responsável Principal — coordenador(a) da Câmara Técnica</div>
@@ -1928,7 +1939,7 @@ const decreto = [
   </ol>
  `},
  {tag:'Art. 5º', titulo:'Órgãos Envolvidos', body:`
-  <span class=&quot;art-tag&quot;>art. 5º</span><p>O Comitê El Niño será composto por representantes titulares e respectivos suplentes de 18 órgãos e entidades estaduais. Ver a lista completa e a matriz de participação na aba <b>Órgãos &amp; Participação</b>.</p>
+  <span class=&quot;art-tag&quot;>art. 5º</span><p>O Comitê El Niño será composto por representantes titulares e respectivos suplentes de 18 órgãos e entidades estaduais. Ver a lista completa e a matriz de participação na aba <b>Órgãos & Participação</b>.</p>
   <p><b>§ 1º</b> Os representantes titulares e suplentes serão indicados pelos respectivos órgãos no prazo de até 20 (vinte) dias úteis contado da publicação deste Decreto.</p>
   <p><b>§ 2º</b> Poderão ser convidados a participar das reuniões, representantes de órgãos federais, municípios, instituições de pesquisa, universidades, concessionárias de serviços públicos essenciais e demais entidades relacionadas ao tema.</p>
   <p><b>§ 3º</b> A SEDEC poderá designar coordenador executivo do Comitê para gestão das atividades cotidianas de articulação e monitoramento.</p>
@@ -2007,10 +2018,12 @@ function renderProdutosSedec(){
   produtosSedec.forEach((grupo) => {
     html += `<div class=\'prod-divider\'><span>${grupo.grupo}</span></div>`;
     html += `<div class=\'prod-grid\'>`;
-    grupo.itens.forEach(item => {
+    const isOdd = grupo.itens.length % 2 === 1;
+    grupo.itens.forEach((item, idx) => {
       const highlight = grupo.destaque ? ' highlight' : '';
+      const wide = (isOdd &amp;&amp; idx === grupo.itens.length - 1) ? ' prod-wide' : '';
       html += `
-        <a class=\'prod-card${highlight}\' href=\'${item.url}\' target=\'_blank\' rel=\'noopener\'>
+        <a class=\'prod-card${highlight}${wide}\' href=\'${item.url}\' target=\'_blank\' rel=\'noopener\'>
           <span class=\'prod-icon icon-${item.icon}\'>${PROD_ICONS[item.icon]||''}</span>
           <span class=\'prod-body\'>
             <span class=\'prod-title\'>${item.titulo}</span>
@@ -2167,7 +2180,7 @@ function renderCamaras(filter=''){
       });
       eixoHead.querySelector('.acc-hint').addEventListener('click', toggleEixoOpen);
       const body = el('div','eixo-body', `
-        <div class=&quot;eixo-row&quot;><b>Of. de ligação:</b> ${e.of} &nbsp;·&nbsp; <b>Órgão coordenador:</b> ${e.orgCoord}</div>
+        <div class=&quot;eixo-row&quot;><b>Of. de ligação:</b> ${e.of}  ·  <b>Órgão coordenador:</b> ${e.orgCoord}</div>
         <div class=&quot;chips&quot;>${e.participantes.map(p=>`<span class=&quot;chip${p===e.orgCoord?' coord':''}&quot;>${p}</span>`).join('')}</div>
         <div class=&quot;eixo-assuntos&quot;>${e.assuntos}</div>`);
       item.appendChild(eixoHead);
@@ -2503,6 +2516,28 @@ const ALERTAS_PUBLICO_TIPO_META = {
     frame.srcdoc = frame.getAttribute('data-srcdoc');
     frame.removeAttribute('data-srcdoc');
   }
+
+  function goToProdutosSedec(){
+    show('p-comite');
+    var frame = document.getElementById('sigacenf-frame');
+    if(!frame) return;
+    function tryNav(){
+      try {
+        if(frame.contentWindow && typeof frame.contentWindow.showView === 'function'){
+          frame.contentWindow.showView('produtos');
+          return true;
+        }
+      } catch(e){}
+      return false;
+    }
+    if(tryNav()) return;
+    frame.addEventListener('load', function onLoad(){
+      frame.removeEventListener('load', onLoad);
+      setTimeout(tryNav, 60);
+    });
+  }
+  var goProdutosSedecBtn = document.getElementById('goProdutosSedecBtn');
+  if(goProdutosSedecBtn) goProdutosSedecBtn.addEventListener('click', goToProdutosSedec);
 
   function show(id){
     tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t.dataset.panel === id)); });
